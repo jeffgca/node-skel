@@ -4,13 +4,16 @@
   "description": "Skeleton project for new node projects",
   "main": "index.js",
   "scripts": {
-    "watch": "npx nodemon ./index.js",
-    "test": "jest"
+    "watch": "npx nodemon --exec babel-node ./index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
     "dotenv": "^14.3.1",
     "jest": "^27.4.7",
     "nodemon": "^2.0.15"
